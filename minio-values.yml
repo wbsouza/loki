@@ -1,0 +1,24 @@
+# minio-values.yml
+accessKey: myMinioAccessKey
+secretKey: myMinioSecretKey
+buckets:
+  - name: loki
+    policy: none
+    purge: false
+defaultBucket:
+  enabled: false
+persistence:
+  enabled: true
+  size: 10Gi
+resources:
+  requests:
+    memory: 2Gi
+    cpu: 1
+replicas: 4
+service:
+  type: ClusterIP
+securityContext:
+  runAsUser: 1000
+  runAsNonRoot: true
+  fsGroup: 1000
+

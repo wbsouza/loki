@@ -1,0 +1,20 @@
+loki:
+  serviceName: loki
+  servicePort: 3100
+  serviceScheme: http
+  externalLabels: {}
+  user: ""
+  password: ""
+  passwordFile: ""
+  bearerToken: ""
+  bearerTokenFile: ""
+  tenantID: ""
+
+config:
+  lokiAddress: http://loki.loki.svc.cluster.local:3100/loki/api/v1/push
+  snippets:
+    pipelineStages:
+      - docker: {}
+    clients:
+      - url: http://loki.loki.svc.cluster.local:3100/loki/api/v1/push
+

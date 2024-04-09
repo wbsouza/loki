@@ -1,0 +1,13 @@
+# memcached-values.yml
+architecture: high-availability
+replicaCount: 3
+persistence:
+  enabled: false
+resources:
+  requests:
+    memory: 256Mi
+    cpu: 100m
+securityContext:
+  enabled: true
+  runAsUser: 1001
+
